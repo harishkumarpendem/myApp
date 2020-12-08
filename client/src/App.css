@@ -1,0 +1,9 @@
+.full-screen-background{
+    background: white url("./components/images/bggg.jpg") no-repeat scroll center;
+    height: 88vh;
+}
+.wrapper{
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    color: white;
+}
