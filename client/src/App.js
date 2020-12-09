@@ -9,6 +9,7 @@ import WomenWear from "./components/pages/WomenWear"
 import Upload from "./components/pages/Upload"
 import Login from "./components/user/Login"
 import Register from "./components/user/Register"
+import Footer from './components/layout/Footer';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route exact path= "/register" component={Register} />
         <Route exact path= "/login" component={Login} />
       </Switch>
+      {/* <Footer /> */}
     </Router>
     
     </div>
