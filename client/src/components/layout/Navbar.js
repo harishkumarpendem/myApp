@@ -31,7 +31,7 @@ let Navbar = () => {
                             <Link to = "/login" className='nav-link'>Login</Link>
                         </li>
                         <li className= 'navbar-item'>
-                            <Link to = "/register " className='nav-link'>Register</Link>
+                            <Link to = "/register" className='nav-link'>Register</Link>
                         </li>
                     </ul>
                 </div>

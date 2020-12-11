@@ -7,3 +7,12 @@
     height: 100%;
     color: white;
 }
+.bg-brown, .btn-brown{
+    background: linear-gradient(45deg, saddlebrown, #926e4d) !important;
+}
+.text-brown{
+    color: #626e4d !important;
+}
+.bg-light-brown{
+    background-color: #926e4d !important;
+}
