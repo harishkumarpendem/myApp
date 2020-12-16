@@ -24,7 +24,7 @@ let Register = () => {
                                 <input type="password" className="form-control" placeholder="password"/>
                               </div>
                               <div>
-                                  <input type="submit" value="Create Account    " className="btn btn-info btn-sm" />
+                                  <input type="submit" value="Create Account" className="btn btn-info btn-sm" />
                               </div>
                               <p className="text-white">Already Registered ?
                                 <Link to="/login" className="text-cyan font-weight-bold"> Login</Link>
