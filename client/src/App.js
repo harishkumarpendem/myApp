@@ -10,12 +10,14 @@ import Upload from "./components/pages/Upload"
 import Login from "./components/user/Login"
 import Register from "./components/user/Register"
 import Footer from './components/layout/Footer';
-
+import {Provider} from "react-redux";
+import { store } from './redux/store';
 
 function App() {
   return (
     <div className="App">
-    <Router>
+    <Provider store={store}>
+      <Router>
       <Navbar /> 
       <Switch>
         <Route exact path= "/" component={Home} />
@@ -28,6 +30,7 @@ function App() {
       </Switch>
       {/* <Footer /> */}
     </Router>
+    </Provider>
     
     </div>
   );
