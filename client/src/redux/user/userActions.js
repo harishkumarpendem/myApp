@@ -1,7 +1,7 @@
 import Axios from "axios";
-import { REGISTER_USER_REQUEST } from "./userActionTypes";
+import { REGISTER_USER_REQUEST, REGISTER_USER_SUCCESS } from "./userActionTypes";
 
-let registerUser = (user) =>{
+let registerUser = (user,history) =>{
     return async(dispatch) => {
         try{
             dispatch({
@@ -12,10 +12,22 @@ let registerUser = (user) =>{
                     'content-Type' : 'application/json'
                 }
             }
-            let response = await Axios.post(`/user/register`);
+            let response = await Axios.post(`/user/register` , JSON.stringify(user), config);
+            dispatch({
+                type : REGISTER_USER_SUCCESS,
+                payload : response.data
+            });
+            history.push(`/login`);
         }
         catch(err){
-
+            let errorList = err.response.data.errors;
+            console.error(errorList);
+            dispatch({
+                type : REGISTER_USER_SUCCESS,
+                payload : errorList
+            });
         }
     };
 };
+
+export {registerUser};

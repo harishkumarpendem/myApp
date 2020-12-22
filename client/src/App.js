@@ -9,9 +9,11 @@ import WomenWear from "./components/pages/WomenWear"
 import Upload from "./components/pages/Upload"
 import Login from "./components/user/Login"
 import Register from "./components/user/Register"
+import Alert from "./components/layout/Alert"
 import Footer from './components/layout/Footer';
 import {Provider} from "react-redux";
 import { store } from './redux/store';
+
 
 function App() {
   return (
@@ -19,6 +21,9 @@ function App() {
     <Provider store={store}>
       <Router>
       <Navbar /> 
+      <div className="container">
+        <Alert />
+      </div>
       <Switch>
         <Route exact path= "/" component={Home} />
         <Route exact path= "/men" component={MensWear} />

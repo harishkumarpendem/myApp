@@ -1,8 +1,14 @@
 import React,{Fragment, useState} from 'react'
 import { Link } from 'react-router-dom'
 import logo from "../images/logo1.png"
+import {useDispatch} from "react-redux"
+import {registerUser} from "../../redux/user/userActions"
+import {useHistory} from 'react-router-dom'
 
 let Register = () => {
+    let dispatch = useDispatch();
+    let history = useHistory(); 
+
     let [user, setUser] = useState({
         name : "",
         email : "",
@@ -12,6 +18,7 @@ let Register = () => {
     let submitRegister = (e) => {
         e.preventDefault();
         //Redux call
+        dispatch(registerUser(user, history));
     };
 
     return (
